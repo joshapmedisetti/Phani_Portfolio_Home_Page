@@ -1,0 +1,192 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f242d;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  width: 100%;
+  background-color: #1f242d;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.logoo {
+  text-decoration: none;
+  color: #7cf03d;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.elements {
+  display: flex;
+  gap: 2rem;
+  padding-right: 6%;
+}
+
+.nav_elements {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav_elements:hover {
+  color: #7cf03d;
+}
+
+/* Responsive Navbar */
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .elements {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .logoo {
+    padding-left: 30px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Hero Section */
+.name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 9%;
+  padding-top: 15vh; /* To offset fixed navbar */
+}
+
+.namediv {
+  max-width: 500px;
+}
+
+.name_txt {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.home-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 {
+  height: 350px;
+  border-radius: 50%;
+  border: 2px solid #7cf03d;
+}
+
+/* Social icons + download button */
+.socialicons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.instagramlogo,
+.whatsapplogo {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #6cf025;
+}
+
+/* Responsive hero section */
+@media (max-width: 768px) {
+  .name {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 18vh;
+    height: auto;
+  }
+
+  .home-img {
+    margin-top: 20px;
+  }
+
+  .img1 {
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .socialicons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .download-btn {
+    margin-left: 0;
+  }
+}
